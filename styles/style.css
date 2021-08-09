@@ -5,6 +5,7 @@
     --primary-dark: #005168;
     --accent: #FA9138;
     --neutral: #fff;
+    --dynamic-scale: clamp(1rem, 3vw, 1.5rem);
 }
 
 *,
@@ -49,20 +50,23 @@ body {
 }
 
 header {
-    font-size: 1.5rem;
-    margin: 2em 0 1.5em 0;
+    font-size: var(--dynamic-scale);
+    margin: var(--dynamic-scale);
+}
+
+h1 {
+    text-align: center;
 }
 
 #feedback {
-    font-size: 2rem;
-    margin: 1em 0;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    margin: var(--dynamic-scale);
     height: 2.6875rem;
 }
 
 #scoreboard {
     display: flex;
     gap: 3em;
-    margin: 1.5em 0;
     height: 6rem;
 }
 
@@ -72,11 +76,12 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
 #player i,
 #computer i {
-    font-size: 3rem;
+    font-size: clamp(1rem, 15vw, 3rem);
 }
 
 #options {
@@ -86,11 +91,11 @@ header {
 }
 
 #options button {
-    font-size: 2rem;
+    font-size: clamp(1rem, 15vw, 2rem);
 }
 
 #results {
-    font-size: 1.5rem;
+    font-size: var(--dynamic-scale);
     font-weight: bold;
     height: 2rem;
     margin: 1em 0;
@@ -100,7 +105,7 @@ header {
 #restart {
     background-color: var(--accent);
     color: var(--primary-dark);
-    font-size: 1rem;
+    font-size: clamp(1.05rem, 3vw, 1.25rem);
     font-weight: bold;
     animation: appear 250ms ease-in;
 }
