@@ -5,10 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/main.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Rock, Paper, Scissor</h1>
+    </header>
 
+    <section id="scoreboard">
+        <div id="player">
+            <h2>Player</h2>
+            <p id="player_score">0</p>
+        </div>
+        <div id="computer">
+            <h2>Computer</h2>
+            <p id="computer_score">0</p>
+        </div>
+    </section>
+
+    <section id="options">
+        <button>
+            <i class='far fa-hand-rock'></i>
+        </button>
+        <button>
+            <i class="far fa-hand-paper"></i>
+        </button>
+        <button>
+            <i class="far fa-hand-scissors"></i>
+        </button>
+    </section>
+
+    <p class="feedback">feedback</p>
+    <p id="results">results</p>
 </body>
 </html>
