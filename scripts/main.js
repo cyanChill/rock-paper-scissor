@@ -63,12 +63,15 @@ function checkEnd() {
     }
 }
 
+/* Toggle the game buttons once someone wins*/
 function toggleButtons() {
     rock.disabled = !rock.disabled;
     paper.disabled = !paper.disabled;
     scissor.disabled = !scissor.disabled;
 }
 
+
+/* Button Events */
 rock.addEventListener('click', (e) => {
     const computerSelect = computerPlay();
     playRound('Rock', computerSelect);
@@ -83,7 +86,6 @@ scissor.addEventListener('click', (e) => {
     const computerSelect = computerPlay();
     playRound('Scissor', computerSelect);
 });
-
 
 
 restart.addEventListener('click', (e) => {
