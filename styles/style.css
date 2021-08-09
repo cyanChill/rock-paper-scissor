@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --primary: #3AA8C1;
+    --primary-dark: #005168;
+    --accent: #FA9138;
+    --neutral: #fff;
+}
+
 *,
 *::before,
 *::after {
@@ -6,27 +15,101 @@
     padding: 0;
 }
 
+button {
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: rgb(221, 221, 221);
+}
+
+i {
+    width: 2rem;
+    height: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    background: var(--primary-dark);
+    color: var(--neutral);
+    font-family: 'Nunito', sans-serif;
     height: 100vh;
 }
 
 header {
-    margin-bottom: 2em;
+    font-size: 1.5rem;
+    margin: 2em 0 1.5em 0;
 }
 
+#feedback {
+    font-size: 2rem;
+    margin: 1em 0;
+    height: 2.6875rem;
+}
 
 #scoreboard {
     display: flex;
     gap: 3em;
-    margin-bottom: 1em;
+    margin: 1.5em 0;
+    height: 6rem;
 }
 
-#scoreboard div {
+#player,
+#computer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1em;
+}
+
+#player i,
+#computer i {
+    font-size: 3rem;
+}
+
+#options {
+    display: flex;
+    gap: 2em;
+    margin: 1.5em;
+}
+
+#options button {
+    font-size: 2rem;
+}
+
+#results {
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 2rem;
+    margin: 1em 0;
+    animation: appear 250ms ease-in;
+}
+
+#restart {
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    font-size: 1rem;
+    font-weight: bold;
+    animation: appear 250ms ease-in;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
