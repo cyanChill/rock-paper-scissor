@@ -7,37 +7,40 @@
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Rock, Paper, Scissor</h1>
     </header>
 
+    <p id="feedback"></p>
+
     <section id="scoreboard">
         <div id="player">
-            <h2>Player</h2>
-            <p id="player_score">0</p>
+            <h2>Player: <span id="player-score">0</span></h2>
+            <i id="player-select" class=""></i>
         </div>
         <div id="computer">
-            <h2>Computer</h2>
-            <p id="computer_score">0</p>
+            <h2>Computer: <span id="computer-score">0</span></h2>
+            <i id="computer-select" class=""></i>
         </div>
     </section>
 
     <section id="options">
-        <button>
+        <button id="rock">
             <i class='far fa-hand-rock'></i>
         </button>
-        <button>
+        <button id="paper">
             <i class="far fa-hand-paper"></i>
         </button>
-        <button>
+        <button id="scissor">
             <i class="far fa-hand-scissors"></i>
         </button>
     </section>
 
-    <p class="feedback">feedback</p>
-    <p id="results">results</p>
+    <p id="results"></p>
+
+    <button id="restart" class="hidden">Restart</button>
 </body>
 </html>
