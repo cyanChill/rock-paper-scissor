@@ -37,7 +37,7 @@ function playRound(playerSelect, computerSelect) {
         result = "You lost!";
     }
 
-    result === "You won!" ? updateScore(++userScore, compScore) : result === "You lost!" ? updateScore(userScore, ++ compScore) : '';
+    result === "You won!" ? updateScore(++userScore, compScore) : result === "You lost!" ? updateScore(userScore, ++compScore) : '';
     feedback.innerText = result;
     checkEnd();
 }
