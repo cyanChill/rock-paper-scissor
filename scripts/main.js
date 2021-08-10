@@ -22,7 +22,8 @@ const getRandomInt = (max) => Math.floor(Math.random() * max);
 const computerPlay = () => choices[getRandomInt(3)];
 
 
-function playRound(playerSelect, computerSelect) {
+function playRound(playerSelect) {
+    const computerSelect = computerPlay();
     playerSelected.classList = choiceImgs[playerSelect];
     computerSelected.classList = choiceImgs[computerSelect];
     let result = '';
@@ -69,24 +70,7 @@ function toggleButtons() {
 }
 
 
-/* Button Events */
-rock.addEventListener('click', (e) => {
-    const computerSelect = computerPlay();
-    playRound('Rock', computerSelect);
-});
-
-paper.addEventListener('click', (e) => {
-    const computerSelect = computerPlay();
-    playRound('Paper', computerSelect);
-});
-
-scissor.addEventListener('click', (e) => {
-    const computerSelect = computerPlay();
-    playRound('Scissor', computerSelect);
-});
-
-
-restart.addEventListener('click', (e) => {
+function reset() {
     updateScore(0, 0)
     playerSelected.classList = '';
     computerSelected.classList = '';
@@ -94,4 +78,4 @@ restart.addEventListener('click', (e) => {
     results.innerText = '';
     toggleButtons();
     restart.classList.add('hidden');
-});
+};

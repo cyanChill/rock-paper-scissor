@@ -28,19 +28,19 @@
     </section>
 
     <section id="options">
-        <button id="rock">
+        <button id="rock" onclick="playRound('Rock')">
             <i class='far fa-hand-rock'></i>
         </button>
-        <button id="paper">
+        <button id="paper" onclick="playRound('Paper')">
             <i class="far fa-hand-paper"></i>
         </button>
-        <button id="scissor">
+        <button id="scissor" onclick="playRound('Scissor')">
             <i class="far fa-hand-scissors"></i>
         </button>
     </section>
 
     <p id="results"></p>
 
-    <button id="restart" class="hidden">Restart</button>
+    <button id="restart" class="hidden" onclick="reset()">Restart</button>
 </body>
 </html>
